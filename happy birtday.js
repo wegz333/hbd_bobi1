@@ -1,13 +1,8 @@
-window.onload = function() {
-  // Trigger the music play with an invisible button
-  document.getElementById("play-music").click();
-};
-
-// Function that runs after the "invisible" button is clicked
-document.getElementById("play-music").addEventListener('click', function() {
+document.getElementById("start-music").addEventListener('click', function() {
   var music = document.getElementById("bg-music");
   music.play();  // Play the music
   music.muted = false; // Unmute the music
+  this.style.display = 'none';  // Hide the button after the user clicks
 });
 
 let w = (c.width = window.innerWidth),
