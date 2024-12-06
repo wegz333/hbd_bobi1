@@ -1,9 +1,12 @@
-document.getElementById("start-music").addEventListener('click', function() {
+window.onload = function() {
   var music = document.getElementById("bg-music");
-  music.play();  // Play the music
-  music.muted = false; // Unmute the music
-  this.style.display = 'none';  // Hide the button after the user clicks
-});
+  music.play();
+  
+  // Wait a moment to ensure the autoplay starts, then unmute
+  setTimeout(function() {
+    music.muted = false; // Unmute the music
+  }, 100); // Set a short delay, like 100ms
+};
 
 let w = (c.width = window.innerWidth),
   h = (c.height = window.innerHeight),
